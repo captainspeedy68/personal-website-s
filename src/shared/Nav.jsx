@@ -1,6 +1,21 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
+    const link = <>
+        <li><a>Item 1</a></li>
+        <li>
+            <details>
+                <summary>Research</summary>
+                <ul className="p-2">
+                    <li><NavLink>Original Article</NavLink></li>
+                    <li><NavLink>Book Chapter</NavLink></li>
+                    <li><NavLink>Book Review</NavLink></li>
+                </ul>
+            </details>
+        </li>
+        <li><a>Item 3</a></li>
+    </>
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -20,21 +35,13 @@ const Nav = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a className="btn btn-ghost text-xl">Md. Salman Sohel</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    {
+                        link
+                    }
                 </ul>
             </div>
             <div className="navbar-end">
