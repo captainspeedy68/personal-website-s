@@ -8,9 +8,9 @@ const Nav = () => {
             <details>
                 <summary>Research</summary>
                 <ul className="p-2">
-                    <li><NavLink>Original Article</NavLink></li>
-                    <li><NavLink>Book Chapter</NavLink></li>
-                    <li><NavLink>Book Review</NavLink></li>
+                    <li><NavLink to={"/researches"}>Original Article</NavLink></li>
+                    <li><NavLink to={"/chapters"}>Book Chapter</NavLink></li>
+                    <li><NavLink to={"/review"}>Book Review</NavLink></li>
                 </ul>
             </details>
         </li>
